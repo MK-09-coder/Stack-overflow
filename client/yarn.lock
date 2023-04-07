@@ -1559,6 +1559,11 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@kommunicate/kommunicate-chatbot-plugin@^0.0.6":
+  "integrity" "sha512-2W8qcyaypyWzQYkMfZ9V5JkD+ZpG/WU2vX/XwdtcnzPGiQeSxbvTw2XslSr+kr152vfBkPiQuQ0TuTVH7E0PHg=="
+  "resolved" "https://registry.npmjs.org/@kommunicate/kommunicate-chatbot-plugin/-/kommunicate-chatbot-plugin-0.0.6.tgz"
+  "version" "0.0.6"
+
 "@leichtgewicht/ip-codec@^2.0.1":
   "integrity" "sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A=="
   "resolved" "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"

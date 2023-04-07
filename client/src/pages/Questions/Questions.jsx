@@ -7,11 +7,9 @@ const Questions = () => {
   return (
     <div className='home-container-1'>
       <LeftSidebar />
-      <div className='home-container-2'>
-        <HomeMainbar />
-        <RightSidebar />
-      </div>
-    </div>
+        <HomeMainbar/>
+        <RightSidebar/>
+        </div>
   )
 }
 

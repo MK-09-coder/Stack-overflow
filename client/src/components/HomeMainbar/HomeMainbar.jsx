@@ -3,9 +3,10 @@ import {useLocation,useNavigate} from 'react-router-dom'
 import './HomeMainbar.css' 
 import {useSelector} from 'react-redux'
 import QuestionList from './QuestionList'
+import RightSidebar from '../RightSidebar/RightSidebar'
 const HomeMainbar = () => {
   const location = useLocation()
-  const user=1;
+  const user=localStorage.getItem('Profile');
   const navigate = useNavigate()
   const questionsList = useSelector(state => state.questionsReducer)
   //console.log(questionsList)
@@ -77,7 +78,8 @@ const HomeMainbar = () => {
           location.pathname === '/' ? <h1>Top Questions</h1>:<h1>All Questions</h1>
         }
         <button onClick={checkAuth} className='ask-btn'>Ask Question</button>
-      </div>
+        
+        </div>
       <div>
         {
           questionsList.data===null ?

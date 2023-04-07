@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import {useSelector,useDispatch} from 'react-redux'
 import {Link,useNavigate} from 'react-router-dom'
 import decode from 'jwt-decode'
@@ -9,8 +9,12 @@ import './Navbar.css'
 import {setCurrentUser} from '../../actions/currentUser'
 const Navbar = () => {
     const dispatch = useDispatch()
+    const [showMenu,setShowMenu]=useState(false)
     var User= useSelector((state) => (state.currentUserReducer))
     const navigate=useNavigate()
+    const handleMenuClick = () => {
+      setShowMenu(!showMenu);
+    }
     //console.log(User)
     const handleLogout = () => {
       dispatch({type:'LOGOUT'});
@@ -35,9 +39,18 @@ const Navbar = () => {
           <Link to='/' className='nav-item nav-logo'>
           <img src={logo} alt='logo'/>
           </Link>
+          <button className="menu-icon" onClick={handleMenuClick}>
+          <svg viewBox="10 0 30 70" width="20" height="20">
+            <rect width="50" height="5"></rect>
+            <rect y="30" width="50" height="5"></rect>
+            <rect y="60" width="50" height="5"></rect>
+          </svg>
+          </button> 
+          <ul className={`navbar-menu ${showMenu ? 'show' : ''}`}>
           <Link to='/' className='nav-item nav-btn'>About</Link>
           <Link to='/' className='nav-item nav-btn'>Products</Link>
           <Link to='/' className='nav-item nav-btn'>For Teams</Link>  
+          </ul> 
         <form>
             <input type="text" placeholder="Search..."/> {/* This input tag causes box to be created with type as text and inside the box is the placeholder*/}
             <img src={search} alt="search"width="18" className='search-icon'/>

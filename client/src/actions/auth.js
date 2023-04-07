@@ -17,6 +17,7 @@ try{
     dispatch({type:'AUTH',data})
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))))
     navigate('/')
+    window.location.reload();
 } catch(error){
         console.log(error)
 }
