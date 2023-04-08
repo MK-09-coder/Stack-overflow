@@ -17,6 +17,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.7.0",
     "nodemon": "^2.0.20",
-    "otp-generator": "^4.0.1"
+    "otp-generator": "^4.0.1",
+    "sendotp": "^1.2.9"
   }
 }
